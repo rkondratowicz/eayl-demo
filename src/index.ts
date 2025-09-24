@@ -9,16 +9,17 @@ app.use(express.json());
 
 // Routes
 app.get('/', (_req: Request, res: Response) => {
+  var x = 5;
   res.json({
     message: 'Hello, World! 🚀',
     timestamp: new Date().toISOString(),
-    version: '1.0.0',
+    version: '1.0.0'
   });
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
 
 export default app;
