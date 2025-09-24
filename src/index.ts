@@ -1,5 +1,5 @@
-import express from 'express';
 import type { Request, Response } from 'express';
+import express from 'express';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Routes
-app.get('/', (req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   res.json({
     message: 'Hello, World! 🚀',
     timestamp: new Date().toISOString(),
-    version: '1.0.0'
+    version: '1.0.0',
   });
 });
 
